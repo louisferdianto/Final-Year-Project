@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap Admin Theme v3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jQuery UI -->
+    <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
+    <link href="vendors/select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
+    <link href="css/forms.css" rel="stylesheet">
+
+  </head>
+  <body>
+  		
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-5">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1><a href="index.html">Admin Panel EvServe</a></h1>
+	              </div>
+	           </div>
+	           
+	        </div>
+	     </div>
+	</div>
+
+    <div class="page-content">
+    	<div class="row">
+			<div class="col-md-2">
+			  	<div class="sidebar content-box" style="display: block;">
+	                <ul class="nav">
+	                    <li class="submenu">
+	                         <a href="#">
+	                            <i class="glyphicon glyphicon-list"></i> Pages
+	                            <span class="caret pull-right"></span>
+	                         </a>
+	                         <!-- Sub menu -->
+	                         <ul>
+	                            <li><a href="CRUD.html">Add Event</a></li>
+	                            <li><a href="Venue.html">Venue</a></li>
+	                            <li><a href="listdata.html">List Event</a></li>
+	                           	<li><a href="profile.html">Profile</a></li>
+	                          	<li><a href="login.html" onclick="signOut()">Logout</a></li>
+	                        </ul>
+	                    </li>
+	                </ul>
+	            </div>
+			</div>
+
+		  	<div class="col-md-10">
+	  			<div class="row">
+	  				<div class="col-md-6">
+	  					<div class="content-box-large">
+			  				<div class="panel-heading">
+					            <div class="panel-title">Add Venue</div>
+					        </div>
+			  				<div class="panel-body">
+			  					<form action="">
+									<fieldset>
+										<div class="form-group">
+											<label>Venue Name</label>
+											<input class="form-control" placeholder="Venue Name" type="text" id="venueName">
+										</div>
+										<div class="form-group">
+											<label>Capacity</label>
+											<input class="form-control" placeholder="Capacity" type="number" min="0" id="venueCapacity">
+										</div>
+
+									</fieldset>
+                     				<div class="action">
+			                    <a class="btn btn-primary signup" onclick="storeVenueData()">Add</a>
+			                </div>
+								</form>
+			  				</div>
+			  			</div>
+	  				</div>
+	  				<div class="col-md-6">
+	  					<div class="content-box-large">
+			  				<div class="panel-heading">
+					            <div class="panel-title">Edit Venue</div>
+					        </div>
+			  				<div class="panel-body">
+			  					<form action="">
+									<fieldset>
+										<div class="form-group">
+											<label>Venue Name</label>
+											<input class="form-control" placeholder="Venue Name" type="text" id="editVenueName">
+										</div>
+										<div class="form-group">
+											<label>Capacity</label>
+											<input class="form-control" placeholder="Capacity" type="number" min="0" id="editVenueCapacity">
+										</div>
+										<div class="action">
+			                    <a class="btn btn-primary signup" onclick="editRow()">Edit</a>
+			                </div>
+									</fieldset>
+								</form>
+			  				</div>
+			  			</div>
+	  				</div>
+	  				</div>
+  					<div class="content-box-large">
+		  				<div class="panel-heading">
+							<div class="panel-title">List of Venue</div>
+							<input type="button" name="submitBtn" id="submitBtn" onclick="listVenueData()" value="LIST DATA">
+						</div>
+
+		  				<div class="panel-body">
+				  					<table class="table" id="tableVenue">
+								<thead>
+									<tr>
+						                <th id="venueID">ID</th>
+						                <th>Venue Name</th>
+						                <th>Capacity</th>
+						                <th>Date Created</th>
+						                <th>Delete</th>
+						            </tr>
+								</thead>
+							</table>
+		  				</div>
+  					</div>
+				</div>
+	  		</div>
+	  		<!--  Page content -->
+		</div>
+    </div>
+
+    <footer>
+         <div class="container">
+         
+            <div class="copy text-center">
+               Copyright 2018 EvServe
+            </div>
+            
+         </div>
+      </footer>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script>
+	<script type="text/javascript" src="lib/node_modules/firebase/firebase-firestore.js"></script>
+	<script type="text/javascript" src="lib/node_modules/firebase/firebase-storage.js"></script>
+	<script type="text/javascript" src="lib/node_modules/firebase/firebase-messaging.js"></script>
+	<script type="text/javascript" src="bootstrap/js/initFirebase.js"></script>
+	<script type="text/javascript" src="bootstrap/js/venue.js"></script>
+    <script src="js/custom.js"></script>
+
+  </body>
+</html>

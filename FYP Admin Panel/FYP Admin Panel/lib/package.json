@@ -1,0 +1,16 @@
+{
+  "name": "amca-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "loui",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^4.11.0",
+    "firebase-admin": "^5.11.0",
+    "jquery": "^3.3.1"
+  }
+}
